@@ -22,12 +22,12 @@ export default function Results({ input }) {
                         const totalAmountInvested = data.valueEndOfYear - totalInterest;
                         return (
                             <tr key={data.year}>
-                            <td>{data.year}</td>
-                            <td>{formatter.format(data.valueEndOfYear)}</td>
-                            <td>{formatter.format(data.interest)}</td>
-                            <td>{formatter.format(totalInterest)}</td>
-                            <td>{formatter.format(totalAmountInvested)}</td>
-                        </tr>
+                                <td>{data.year}</td>
+                                <td>{formatter.format(data.valueEndOfYear)}</td>
+                                <td>{formatter.format(data.interest)}</td>
+                                <td>{formatter.format(totalInterest)}</td>
+                                <td>{formatter.format(totalAmountInvested)}</td>
+                            </tr>
                         )
                     })}
                 </tbody>

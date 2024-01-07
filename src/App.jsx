@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import Header from "./components/Header";
 import UserInput from "./components/UserInput";
-
-import { calculateInvestmentResults } from "./util/investment";
 import Results from "./components/Results";
 
 
@@ -24,19 +22,14 @@ function App() {
       ...prevInvestment,
       [name]: +value
     }))
-    console.log(investments)
-
   }
-
-  console.log(calculateInvestmentResults(investments))
-
 
   return (
     <>
-    <Header />
-    <UserInput values = {investments} changeInput={handleChange}/>
-    {!inputIsValid && <p className="center">Please enter valid values</p>}
-    {inputIsValid && <Results input={investments} />}
+      <Header />
+      <UserInput values={investments} changeInput={handleChange} />
+      {!inputIsValid && <p className="center">Please enter valid values</p>}
+      {inputIsValid && <Results input={investments} />}
     </>
   )
 }
